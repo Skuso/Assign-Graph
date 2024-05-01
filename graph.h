@@ -14,12 +14,11 @@ size_t Graph::nvertices() const {
   return vertices;
 }
 size_t Graph::nedges() const { 
-  // XXX You must implement this.
-  return 0; 
+  return edges;
 }
 
 void Graph::assign(const std::vector<std::string> & vertices, const std::vector<GraphEdge> & edges) {
-  // XXX You must implement this.
+  
 }
 
 bool Graph::edge_exists(size_t origin, size_t destination) const {
@@ -57,8 +56,7 @@ std::vector <bool> Graph::unweighted_adjacency_matrix() const {
 }
 
 std::string Graph::v_label(size_t vertex) const {
-  // XXX You must implement this.
-  return "wrong";
+  
 }
 
 ssize_t Graph::v_index(const std::string &label) const {
