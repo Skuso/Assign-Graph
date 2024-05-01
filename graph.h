@@ -26,8 +26,8 @@ void Graph::assign(const std::vector<std::string> & vertices, const std::vector<
 }
 
 bool Graph::edge_exists(size_t origin, size_t destination) const {
-  // XXX You must implement this.
-  return false; }
+  if (origin.size() >= 
+}
 
 double Graph::edge_weight(size_t origin, size_t destination) const {
   // XXX You must implement this.
