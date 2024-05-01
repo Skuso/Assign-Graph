@@ -11,8 +11,7 @@
 #include <iostream>
 
 size_t Graph::nvertices() const {
-  // XXX You must implement this.
-  return 0;
+  return vertices;
 }
 size_t Graph::nedges() const { 
   // XXX You must implement this.
