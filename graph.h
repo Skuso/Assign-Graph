@@ -18,8 +18,11 @@ size_t Graph::nedges() const {
 }
 
 void Graph::assign(const std::vector<std::string> & vertices, const std::vector<GraphEdge> & edges) {
-  edges.clear();
-  ver
+  this->edges.clear();
+  this->vertices.clear();
+
+  this->edges =  edges;
+  this->vertices = vertices;
 }
 
 bool Graph::edge_exists(size_t origin, size_t destination) const {
