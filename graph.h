@@ -26,12 +26,25 @@ void Graph::assign(const std::vector<std::string> & vertices, const std::vector<
 }
 
 bool Graph::edge_exists(size_t origin, size_t destination) const {
-  if (origin.size() >= 
+  if (origin >= vertices.size() || destination >= vertices.size()) {
+    return false;
+  }
+  for (auto edge : edges) {
+    if (edge.origin == origin && edge.destination == destination) {
+      return true;
+    }
+  }
 }
 
 double Graph::edge_weight(size_t origin, size_t destination) const {
-  // XXX You must implement this.
-  return 99999;
+  if (origin >= vertices.size() || destination >= vertices.size()) {
+    return INFINITY;
+  }
+  for (auto edge : edges) {
+    if (edge.origin == origin && edge.destination == destination) {
+      return edge.weight;
+    }
+  }
 }
 
 std::vector<AdjListEdge> Graph::undirected_adjacency_list(size_t vertex) const {
